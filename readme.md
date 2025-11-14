@@ -8,7 +8,7 @@ The queries can be found in the queries folder.
 ---
 
 ## Project Structure
-
+```
 sql-sample/
 ├─ docker-compose.yml
 ├─ initdb/
@@ -21,6 +21,7 @@ sql-sample/
 
 The two SQL files inside `initdb/` run automatically the first time the database starts.
 They create all tables and load the sample data.
+```
 
 ---
 
