@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:16 # Define the PostgreSQL version
+    container_name: sql-portfolio-db # Name of the container
+    environment:
+      POSTGRES_USER: postgres # Database user
+      POSTGRES_PASSWORD: postgres # Database password
+      POSTGRES_DB: portfolio_db # Default database name
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data # Persitant data storage
+      - ./initdb:/docker-entrypoint-initdb.d # Initialization scripts
+volumes:
+  db_data: # define the volume for persistent storage
